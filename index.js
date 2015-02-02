@@ -261,7 +261,8 @@ Shop.prototype.showMenu = function (opts) {
         command: this.command,
         title: opts.title || this.name.toUpperCase(),
         names: this._adventures.map(function (x) { return x.name }),
-        completed: this.state.completed
+        completed: this.state.completed,
+        autoclose: opts.autoclose !== false
     });
     menu.on('select', function (name) {
         console.log();
